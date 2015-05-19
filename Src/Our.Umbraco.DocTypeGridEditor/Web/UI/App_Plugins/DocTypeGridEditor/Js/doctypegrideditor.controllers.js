@@ -19,7 +19,8 @@
                 $scope.control.value.id = guid();
             }
             if ("name" in $scope.control.value.value && $scope.control.value.value.name) {
-                $scope.title = $scope.control.value.value.name;
+                $scope.title = $scope.control.value.docType;
+                //$scope.title = $scope.control.value.value.name;
             }
             if ("docType" in $scope.control.value && $scope.control.value.docType) {
                 dtgeResources.getContentTypeIcon($scope.control.value.docType).then(function (data2) {
